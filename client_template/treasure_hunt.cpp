@@ -2,9 +2,9 @@
 
 using namespace duels::treasure_hunt;
 
-int main()
+int main(int argc, char** argv)
 {
-  Game game;
+  Game game(argc, argv, "your name here");
 
   inputMsg input;
   feedbackMsg feedback;
