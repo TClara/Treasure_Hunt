@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(treasure_hunt_server CXX)
 
-SET(DUELS_ROOT "/home/ecn/duels/opt/duels" CACHE STRING "Path to duels installation folder")
+SET(DUELS_ROOT "/opt/duels" CACHE STRING "Path to duels installation folder")
 set(CMAKE_INSTALL_PREFIX ${DUELS_ROOT})
 
 set(CMAKE_CXX_STANDARD 14)
@@ -14,7 +14,8 @@ find_path ( ZMQ_INCLUDE_DIR zmq.h )
 find_library ( ZMQ_LIBRARY NAMES zmq )
 
 include_directories(include ${DUELS_ROOT}/include ${ZMQ_INCLUDE_DIR})
-add_definitions(-DDUELS_ROOT="${DUELS_ROOT}")
+add_definitions(-DDUELS_BIN_PATH="${DUELS_ROOT}/bin")
+add_definitions(-DGAME_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
 
 add_executable(treasure_hunt_server server.cpp Boat_game.cpp Boat_game.h)
 target_link_libraries(treasure_hunt_server ${CMAKE_THREAD_LIBS_INIT} ${ZMQ_LIBRARY})

@@ -2,8 +2,6 @@
 #define TREASURE_HUNT_MSG_H
 #include <sstream>
 #include <duels/game_state.h>
-#include <vector>
-
 namespace duels {
 namespace treasure_hunt {
 struct initMsg
