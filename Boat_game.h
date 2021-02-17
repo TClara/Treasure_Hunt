@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "include/duels/treasure_hunt/msg.h"
+#include <duels/treasure_hunt/msg.h>
 #include <duels/local.h>
 
 #include <stdio.h>
