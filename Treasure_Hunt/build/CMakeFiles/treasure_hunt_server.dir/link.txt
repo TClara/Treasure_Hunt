@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/treasure_hunt_server.dir/server.cpp.o CMakeFiles/treasure_hunt_server.dir/Boat_game.cpp.o  -o treasure_hunt_server  -lpthread -lzmq 
